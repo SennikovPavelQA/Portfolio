@@ -24,12 +24,3 @@ To complete the task, the following Postman features were utilized:
 
 The created Postman collection allows for easy and effective interaction with the [Dummy API](https://dummyapi.io/docs "Dummy API"), providing a user-friendly interface for various user data operations.
 
-### Additional Details:
-
-*   The Postman collection utilizes clear and descriptive names and descriptions for each request, making it easy to use and understand.  
-*   The collection is tested and ensures the correct functionality of all requests.  
-*   The request code is optimized and concise, enhancing its readability and ease of modification.  
-
-### Evaluation:
-
-This work demonstrates proficiency in utilizing Postman to create effective and user-friendly request collections, a valuable skill for API-driven development.
