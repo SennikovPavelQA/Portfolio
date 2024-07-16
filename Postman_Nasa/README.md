@@ -17,4 +17,4 @@ To complete the task, the following Postman features were utilized:
 
 ### Result:
 
-The Postman collection created allows you to interact with AgentApp efficiently and effectively to perform various data operations
+The Postman collection created allows for efficient interaction with the NASA API to perform various data operations as part of this task
