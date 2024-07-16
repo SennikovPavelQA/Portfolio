@@ -16,19 +16,19 @@ Create a Postman collection for Dummy API, including:
 
 To complete the task, the following Postman features were utilized:
 
-Variables: To store frequently used values, such as the API URL and user IDs.
-Snippets: To check the status code of requests, simplifying and optimizing the code.
-HTTP Methods: POST, GET, PUT, DELETE for performing respective operations on the API.
+*   Variables: To store frequently used values, such as the API URL and user IDs.  
+*   Snippets: To check the status code of requests, simplifying and optimizing the code.  
+*   HTTP Methods: POST, GET, PUT, DELETE for performing respective operations on the API.  
 
 ### Result:
 
-The created Postman collection allows for easy and effective interaction with the Dummy API, providing a user-friendly interface for various user data operations.
+The created Postman collection allows for easy and effective interaction with the [Dummy API](https://dummyapi.io/docs "Dummy API"), providing a user-friendly interface for various user data operations.
 
 ### Additional Details:
 
-The Postman collection utilizes clear and descriptive names and descriptions for each request, making it easy to use and understand.
-The collection is tested and ensures the correct functionality of all requests.
-The request code is optimized and concise, enhancing its readability and ease of modification.
+*   The Postman collection utilizes clear and descriptive names and descriptions for each request, making it easy to use and understand.  
+*   The collection is tested and ensures the correct functionality of all requests.  
+*   The request code is optimized and concise, enhancing its readability and ease of modification.  
 
 ### Evaluation:
 
