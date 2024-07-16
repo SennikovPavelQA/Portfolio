@@ -1,0 +1,313 @@
+{
+	"info": {
+		"_postman_id": "25a8ed2d-f6bd-4b6c-a5d9-bc7fafc77bae",
+		"name": "Test_Dummy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35576573"
+	},
+	"item": [
+		{
+			"name": "User list",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base_url}}user",
+					"host": [
+						"{{Base_url}}user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"pm.environment.set(\"email\", jsonData.email);\r",
+							"pm.environment.set(\"User_id\", jsonData.id);\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"firstName\" : \"{{$randomFirstName}}\",\r\n\"lastName\" : \"{{$randomLastName}}\",\r\n\"email\": \"{{$randomEmail}}\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base_url}}user/create",
+					"host": [
+						"{{Base_url}}user"
+					],
+					"path": [
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check new user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base_url}}user/:id",
+					"host": [
+						"{{Base_url}}user"
+					],
+					"path": [
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{User_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"firstName\" : \"TommyTest\",\r\n\"lastName\" : \"CashTest\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base_url}}user/:id",
+					"host": [
+						"{{Base_url}}user"
+					],
+					"path": [
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{User_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check user after update",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base_url}}user/:id",
+					"host": [
+						"{{Base_url}}user"
+					],
+					"path": [
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{User_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{Base_url}}user/:id",
+					"host": [
+						"{{Base_url}}user"
+					],
+					"path": [
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{User_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check user after removing",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base_url}}user/:id",
+					"host": [
+						"{{Base_url}}user"
+					],
+					"path": [
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{User_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "app-id",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "64edf0eb01c0218de1b489a5",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
