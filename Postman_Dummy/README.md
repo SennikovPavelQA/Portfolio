@@ -6,11 +6,11 @@ There is a description of the API: https://dummyapi.io/docs
 
 Create a Postman collection for Dummy API, including:
 
-• Get a list of users
-• Get a specific user
-• Create a new user
-• Update a user
-• Delete a user
+• Get a list of users  
+• Get a specific user  
+• Create a new user  
+• Update a user  
+• Delete a user  
 
 ## Solution:
 
