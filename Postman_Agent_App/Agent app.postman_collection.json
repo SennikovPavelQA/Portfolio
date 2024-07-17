@@ -13,9 +13,14 @@
 					"listen": "test",
 					"script": {
 						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"pm.environment.set('Token', jsonData.token);\r",
+							"\r",
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
-							"});"
+							"});\r",
+							"\r",
+							""
 						],
 						"type": "text/javascript",
 						"packages": {}
@@ -502,7 +507,7 @@
 		"apikey": [
 			{
 				"key": "value",
-				"value": "Token 189f7da30c75b968263283b349dbd9716973e69e",
+				"value": "Token {{Token}}",
 				"type": "string"
 			},
 			{
