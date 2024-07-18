@@ -28,7 +28,7 @@ OrderID	CustomerID	OrderDate	OrderSum
 
 SELECT CompanyName FROM Customers
 JOIN Orders ON Customers.CustomerID = Orders.CustomerID
-WHERE OrderDate NOT BETWEEN '15.11.1996' AND '18.02.1997';
+WHERE OrderDate NOT BETWEEN '15-11-1996' AND '18-02-1997';
 
 
 2. Bring up the names of supplier companies that are located in México D.F.
