@@ -1,0 +1,199 @@
+"Using the technique of equivalence classes, what tests need to be written to cover the conditions 100%?",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Conditions,Result,Test case 1,Test case 2,Test case 3,Test case 4,Test case 5,Test case 6,Test case 7,Test case 8,Test case 9,Test case 10,Test case 11,Test case 12,Test case 13,Test case 14,Test case 15,Test case 16,Test case 17,Test case 18,Test case 19,Test case 20,Test case 21,Test case 22,Test case 23,Test case 24,Test case 25,Test case 26,Test case 27,Test case 28,Test case 29,Test case 30,Test case 31,Test case 32,Test case 33,Test case 34,Test case 35,Test case 36
+Alcohol use <= 17 units per week,Yes/No,Yes,No,No,No,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,Yes,No,Yes,No,No,No,No,No,Yes
+Completion of the Health Risk Assessment questionnaire,Yes/No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,Yes,Yes,Yes,No
+Smoker,Yes/No,Yes,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes
+BMI <= 25.5,Yes/No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,Yes,Yes
+ 25.5 <= IMT < 30 ,Yes/No,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,Yes,No,No,No,Yes,Yes,Yes,Yes,No,Yes,No,No,Yes,No,No,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes
+Smoking cessation course,Yes/No,Yes,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,Yes,Yes,No,Yes,No,No,No,No,No,Yes,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No
+Actions,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Discount $50,,X,X,X,X,,,X,X,,,X,,,,,,,,X,X,,,,,,,,,X,,,,,,X,X
+Discount $46,,,,,X,X,X,,X,X,X,X,X,X,,,,,,,X,X,X,,,,,,,,,,,,,,
+Discount $24,,X,X,X,,,,X,,,,,,,X,X,,X,,,,,,X,X,,X,X,,,,X,,,,,
+Discount $19,,X,X,X,X,X,,X,X,X,,X,X,,X,,,,X,X,X,X,,X,,,X,,,X,X,X,X,,X,X,X
+Extra payment $75,,,,,,,,,,,,,,,,,X,,X,X,,,,,,X,,,X,X,X,,X,X,X,X,X
+Discount $28,,X,,,,,,X,X,X,X,X,X,X,X,X,X,,X,X,,,,,,,X,X,X,,X,,,,,,X
+Discount $23,,X,X,,,,,,,,,X,X,X,X,X,X,X,X,X,X,X,X,,,,,,,,,X,,X,X,X,
+Total,,144,116,93,115,65,46,121,143,93,74,166,116,97,94,75,-24,47,-5,45,138,88,69,43,24,-75,71,52,-47,-6,-28,66,-56,-52,-33,17,22
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,Test data,Expected Result,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Test case 1,"1. 11 units of alcohol per week
+2. Questionnaire completed
+3. Smoker
+4. BMI = 22.3
+5. Course participant",Employee gets a discount: 144$,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Test case 2,"1. 21 units of alcohol per week
+2. Questionnaire completed
+3. Smoker
+4. BMI = 22.3
+5. Course participant",Employee gets a discount: 116$,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Test case 3,"1. 21 units of alcohol per week
+2. Questionnaire incomplete
+3. Smoker
+4. BMI = 22.3
+5. Course participant",Employee gets a discount: 93$,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Test case 4,"1. 21 units of alcohol per week
+2. Questionnaire incomplete
+3. НеSmoker
+4. BMI = 22.3
+5. Not a course participant",Employee gets a discount: 115$,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Test case 5,"1. 21 units of alcohol per week
+2. Questionnaire incomplete
+3. НеSmoker
+4. BMI = 27.3
+5. Not a course participant",Employee gets a discount: 65$,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Test case 6,"1. 21 units of alcohol per week
+2. Questionnaire incomplete
+3. НеSmoker
+4. BMI = 32.3
+5. Not a course participant",Employee gets a discount: 46$,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Test case 7,"1. 11 units of alcohol per week
+2. Questionnaire incomplete
+3. Smoker
+4. BMI = 22.3
+5. Course participant",Employee gets a discount: 121$,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Test case 8,"1. 11 units of alcohol per week
+2. Questionnaire incomplete
+3. НеSmoker
+4. BMI = 22.3
+5. Not a course participant",Employee gets a discount: 143$,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Test case 9,"1. 11 units of alcohol per week
+2. Questionnaire incomplete
+3. НеSmoker
+4. BMI = 27.3
+5. Not a course participant",Employee gets a discount: 93$,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Test case 10,"1. 11 units of alcohol per week
+2. Questionnaire incomplete
+3. НеSmoker
+4. BMI = 32.3
+5. Not a course participant",Employee gets a discount: 74$,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Test case 11,"1. 11 units of alcohol per week
+2. Questionnaire completed
+3. НеSmoker
+4. BMI = 22.3
+5. Not a course participant",Employee gets a discount: 166$,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Test case 12,"1. 11 units of alcohol per week
+2. Questionnaire completed
+3. НеSmoker
+4. BMI = 27.3
+5. Not a course participant",Employee gets a discount: 116$,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Test case 13,"1. 11 units of alcohol per week
+2. Questionnaire completed
+3. НеSmoker
+4. BMI = 32.3
+5. Not a course participant",Employee gets a discount: 97$,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Test case 14,"1. 11 units of alcohol per week
+2. Questionnaire completed
+3. Smoker
+4. BMI = 27.3
+5. Course participant",Employee gets a discount: 94$,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Test case 15,"1. 11 units of alcohol per week
+2. Questionnaire completed
+3. Smoker
+4. BMI = 32.3
+5. Course participant",Employee gets a discount: 75$,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Test case 16,"1. 11 units of alcohol per week
+2. Questionnaire completed
+3. Smoker
+4. BMI = 32.3
+5. Not a course participant",Employee must pay extra: 24$,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Test case 17,"1. 21 units of alcohol per week
+2. Questionnaire completed
+3. Smoker
+4. BMI = 32.3
+5. Course participant",Employee gets a discount: 47$,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Test case 18,"1. 11 units of alcohol per week
+2. Questionnaire completed
+3. Smoker
+4. BMI = 27.3
+5. Not a course participant",Employee must pay extra: 5$,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Test case 19,"1. 11 units of alcohol per week
+2. Questionnaire completed
+3. Smoker
+4. BMI = 22.3
+5. Not a course participant",Employee gets a discount: 45$,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Test case 20,"1. 21 units of alcohol per week
+2. Questionnaire completed
+3. НеSmoker
+4. BMI = 22.3
+5. Not a course participant",Employee gets a discount: 138$,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Test case 21,"1. 21 units of alcohol per week
+2. Questionnaire completed
+3. НеSmoker
+4. BMI = 27.3
+5. Not a course participant",Employee gets a discount: 88$,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Test case 22,"1. 21 units of alcohol per week
+2. Questionnaire completed
+3. НеSmoker
+4. BMI = 32.3
+5. Not a course participant",Employee gets a discount: 69$,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Test case 23,"1. 21 units of alcohol per week
+2. Questionnaire incomplete
+3. Smoker
+4. BMI = 27.3
+5. Course participant",Employee gets a discount: 43$,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Test case 24,"1. 21 units of alcohol per week
+2. Questionnaire incomplete
+3. Smoker
+4. BMI = 32.3
+5. Course participant",Employee gets a discount: 24$,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Test case 25,"1. 21 units of alcohol per week
+2. Questionnaire incomplete
+3. Smoker
+4. BMI = 32.3
+5. Not a course participant",Employee must pay extra: 75$,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Test case 26,"1. 11 units of alcohol per week
+2. Questionnaire incomplete
+3. Smoker
+4. BMI = 27.3
+5. Course participant",Employee gets a discount: 71$,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Test case 27,"1. 11 units of alcohol per week
+2. Questionnaire incomplete
+3. Smoker
+4. BMI = 32.3
+5. Course participant",Employee gets a discount: 52$,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Test case 28,"1. 11 units of alcohol per week
+2. Questionnaire incomplete
+3. Smoker
+4. BMI = 32.3
+5. Not a course participant",Employee must pay extra: 47$,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Test case 29,"1. 21 units of alcohol per week
+2. Questionnaire incomplete
+3. Smoker
+4. BMI = 22.3
+5. Not a course participant",Employee must pay extra: 6$,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Test case 30,"1. 11 units of alcohol per week
+2. Questionnaire incomplete
+3. Smoker
+4. BMI = 27.3
+5. Not a course participant",Employee must pay extra: 28$,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Test case 31,"1. 21 units of alcohol per week
+2. Questionnaire completed
+3. Smoker
+4. BMI = 27.3
+5. Course participant",Employee gets a discount: 66$,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Test case 32,"1. 21 units of alcohol per week
+2. Questionnaire incomplete
+3. Smoker
+4. BMI = 27.3
+5. Not a course participant",Employee must pay extra: 56$,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Test case 33,"1. 21 units of alcohol per week
+2. Questionnaire completed
+3. Smoker
+4. BMI = 32.3
+5. Not a course participant",Employee must pay extra: 52$,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Test case 34,"1. 21 units of alcohol per week
+2. Questionnaire completed
+3. Smoker
+4. BMI = 27.3
+5. Not a course participant",Employee must pay extra: 33$,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Test case 35,"1. 21 units of alcohol per week
+2. Questionnaire completed
+3. Smoker
+4. BMI = 22.3
+5. Not a course participant",Employee gets a discount: 17$,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Test case 36,"1. 11 units of alcohol per week
+2. Questionnaire incomplete
+3. Smoker
+4. BMI = 22.3
+5. Not a course participant",Employee gets a discount: 22$,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
