@@ -2,9 +2,11 @@
 
 Create a collection in Postman with requests to fully test the method:  
 
-```The POST method allows you to create a new project in the system  
+```
+The POST method allows you to create a new project in the system  
 Address: /api/projects  
-Authorisation: required  ```
+Authorisation: required 
+```
 
 The URL in the method must be specified as a global variable (you do not have access to the resource).
 Authorisation tokens in the method must be specified as global variables (you do not have access to the authorisation data).
